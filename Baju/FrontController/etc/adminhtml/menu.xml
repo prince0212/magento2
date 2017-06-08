@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+		<add id="Baju_FrontController::parent" title="Baju FrontController" module="Baju_FrontController" sortOrder="100" resource="Baju_FrontController::parent"/>
+        <add id="Baju_FrontController:front" translate="title" title="Front" module="Baju_FrontController" sortOrder="1001" parent="Baju_FrontController::parent" action="front/index" resource="Baju_FrontController::front"/>
+    </menu>
+</config>

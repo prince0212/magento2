@@ -1,0 +1,7 @@
+<?php 
+$data = $this->getFrontData(); ?>
+<?php foreach ($data as $key => $value): ?>
+	<div class="name"> <?php echo __($value->getName()); ?></div>
+	<div class="email"><?php echo __($value->getEmail()) ?></div>
+	<div class="mobile"><?php echo __($value->getEmail()) ?></div>
+<?php endforeach ?>

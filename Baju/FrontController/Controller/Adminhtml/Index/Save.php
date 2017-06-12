@@ -55,11 +55,6 @@ class Save extends AbstractController
     {
         $frontData = $this->getRequest()->getPostValue();
 
-        /*if (isset($originalRequestData['affiliate']['id'])  && !$originalRequestData['affiliate']['id']) {
-            unset($originalRequestData['affiliate']['id']);
-        }*/
-
-        //$affiliateData = $this->_filterCategoryPostData($originalRequestData['affiliate']);
         $front = $this->frontFactory->create();
         $this->dataObjectHelper->populateWithArray(
             $front,
@@ -82,7 +77,7 @@ class Save extends AbstractController
         return $resultRedirect;
     }
     /**
-     * Filter Affiliate data
+     * Filter Front data
      *
      * @param array $rawData
      * @return array

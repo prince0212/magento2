@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2017 Pradeep, LLC. All rights reserved.
+ * Copyright © 2017 Baju, LLC. All rights reserved.
  * See LICENSE.txt for license details.
  */
 namespace Baju\FrontController\Controller\Adminhtml;

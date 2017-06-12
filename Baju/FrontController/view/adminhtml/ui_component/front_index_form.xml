@@ -26,8 +26,8 @@
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">FrontFormDataProvider</argument>
             <argument name="name" xsi:type="string">front_index_form_data_source</argument>
-            <argument name="primaryFieldName" xsi:type="string">id</argument>
-            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="primaryFieldName" xsi:type="string">front_id</argument>
+            <argument name="requestFieldName" xsi:type="string">front_id</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="submit_url" xsi:type="url" path="front/index/save" />
@@ -46,7 +46,7 @@
                 <item name="label" xsi:type="string" translate="true">Front</item>
             </item>
         </argument>
-        <field name="id">
+        <field name="front_id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>

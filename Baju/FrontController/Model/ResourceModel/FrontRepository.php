@@ -108,11 +108,11 @@ class FrontRepository implements FrontRepositoryInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function getById($frontId)
+    public function getByFrontId($frontId)
     {
         $front = $this->dataFrontFactory->create();
         $this->resourceModel->load($front, $frontId);
-        if (!$front->getId()) {
+        if (!$front->getFrontId()) {
             throw new NoSuchEntityException(__('Front with id %1 does not exist', $frontId));
         }
         return $front;
@@ -128,7 +128,7 @@ class FrontRepository implements FrontRepositoryInterface
      */
     public function deleteById($frontId)
     {
-        $address = $this->getById($frontId);
+        $address = $this->getByFrontId($frontId);
         $this->resourceModel->delete($address);
         return true;
     }

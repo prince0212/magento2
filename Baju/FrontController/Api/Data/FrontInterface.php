@@ -24,7 +24,7 @@ interface FrontInterface
      *
      * @return int|null
      */
-    public function getId();
+    public function getFrontId();
 
     /**
      * Get identifier

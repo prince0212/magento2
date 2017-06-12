@@ -34,7 +34,7 @@ class Edit extends AbstractController
             if (!$frontId) {
 				$front = [];
 			}else{
-				$front = $this->frontRepository->getById($frontId);
+				$front = $this->frontRepository->getByFrontId($frontId);
 			}
             $this->coreRegistry->register('front_data', $front);
             $this->coreRegistry->register(self::CURRENT_FRONT_ID, $frontId);

@@ -26,6 +26,16 @@ class Front extends AbstractModel implements \Baju\FrontController\Api\Data\Fron
      *
      * @return string|null
      */
+    public function getFrontId()
+    {
+        return $this->getData(self::ID);
+    }
+
+    /**
+     * Get Name
+     *
+     * @return string|null
+     */
     public function getName()
     {
         return $this->getData(self::NAME);

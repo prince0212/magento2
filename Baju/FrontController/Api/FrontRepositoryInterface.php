@@ -29,7 +29,7 @@ interface FrontRepositoryInterface
      * @return \Baju\FrontController\Api\Data\FrontInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function getById($frontId);
+    public function getByFrontId($frontId);
 
     /**
      * Retrieve front matching the specified criteria.

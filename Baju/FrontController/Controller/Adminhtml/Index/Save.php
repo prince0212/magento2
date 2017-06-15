@@ -6,7 +6,6 @@
 namespace Baju\FrontController\Controller\Adminhtml\Index;
 
 use Baju\FrontController\Controller\Adminhtml\AbstractController;
-use Baju\FrontController\Model\ResourceModel\FrontRepository;
 
 /**
  * Front edit form save controller
@@ -26,6 +25,12 @@ class Save extends AbstractController
     protected $frontFactory;
 
     /**
+     *
+     * @var \Baju\FrontController\Model\ResourceModel\FrontRepository
+     */
+    protected $frontRepository;
+
+    /**
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      * @param FrontRepository $frontRepository
@@ -36,12 +41,13 @@ class Save extends AbstractController
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
-        FrontRepository $frontRepository,
+        \Baju\FrontController\Model\ResourceModel\FrontRepository $frontRepository,
         \Magento\Framework\Registry $registry,
         \Baju\FrontController\Model\Data\FrontFactory $frontFactory,
         \Magento\Framework\Api\DataObjectHelper $dataObjectHelper
     ) {
         parent::__construct($context, $resultPageFactory, $frontRepository, $registry);
+        $this->frontRepository = $frontRepository;
         $this->dataObjectHelper = $dataObjectHelper;
         $this->frontFactory = $frontFactory;
     }
@@ -63,7 +69,6 @@ class Save extends AbstractController
         );
 
         try {
-            //print_r($originalRequestData['affiliate']); exit;
             $this->frontRepository->save($front);
             $this->messageManager->addSuccessMessage(__('You saved the Data'));
         } catch (\Magento\Framework\Exception\AlreadyExistsException $e) {

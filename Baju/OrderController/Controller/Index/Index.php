@@ -21,16 +21,32 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $jsonPage = $this->_jsonFactory->create();
-        $_orderData = $this->_order->get($this->getRequest()->getParam('order_id'));
-        
-        $data['total'] = $_orderData->getGrandTotal();
-        $data['status'] = $_orderData->getStatus();
-        foreach($_orderData->getAllItems() as $_items){
-            $data['item']['sku'] = $_items->getSku();
-            $data['item']['item_id'] = $_items->getItemId();
-            $data['item']['price'] = $_items->getPrice();
+        $orderId = $this->getRequest()->getParam('id');
+        $data = "Order Controller";
+
+        if(!$orderId){
+            return $jsonPage->setData($data);
         }
-        $data['total_invoiced'] = $_orderData->getTotalInvoiced();
+
+        try {
+            $_orderData = $this->_order->get($orderId);
+            if($_orderData->getIsCustomerGuest()){
+                $data['total'] = $_orderData->getGrandTotal();
+                $data['status'] = $_orderData->getStatus();
+                foreach($_orderData->getAllItems() as $_items){
+                    $data['item']['sku'] = $_items->getSku();
+                    $data['item']['item_id'] = $_items->getItemId();
+                    $data['item']['price'] = $_items->getPrice();
+                }
+                $data['total_invoiced'] = $_orderData->getTotalInvoiced();
+            } else {
+                $data = "Unfortunatily Order Id : ".$orderId." is not a guest User";
+            }
+
+        } catch(Exception $e) {
+            echo $e;
+        }
+        
         return $jsonPage->setData($data);
     }
 }

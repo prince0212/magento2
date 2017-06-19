@@ -53,7 +53,7 @@ interface FrontInterface
      * @param int $id
      * @return $this
      */
-    public function setId($id);
+    public function setFrontId($id);
 
     /**
      * Set name

@@ -47,7 +47,7 @@ class Front extends AbstractModel  implements \Baju\FrontController\Api\Data\Fro
      */
     public function getFrontId()
     {
-        return $this->getData(self::ID);
+        return $this->_get(self::ID);
     }
 
     /**
@@ -86,7 +86,7 @@ class Front extends AbstractModel  implements \Baju\FrontController\Api\Data\Fro
      * @param int $id
      * @return $this
      */
-    public function setId($id)
+    public function setFrontId($id)
     {
         return $this->setData(self::ID, $id);
     }

@@ -47,7 +47,7 @@ class Front extends AbstractModel  implements \Baju\FrontController\Api\Data\Fro
      */
     public function getFrontId()
     {
-        return $this->_get(self::ID);
+        return $this->get(self::ID);
     }
 
     /**
@@ -57,7 +57,7 @@ class Front extends AbstractModel  implements \Baju\FrontController\Api\Data\Fro
      */
     public function getName()
     {
-        return $this->_get(self::NAME);
+        return $this->get(self::NAME);
     }
 
     /**
@@ -67,7 +67,7 @@ class Front extends AbstractModel  implements \Baju\FrontController\Api\Data\Fro
      */
     public function getEmail()
     {
-        return $this->_get(self::EMAIL);
+        return $this->get(self::EMAIL);
     }
 
     /**
@@ -77,7 +77,7 @@ class Front extends AbstractModel  implements \Baju\FrontController\Api\Data\Fro
      */
     public function getMobile()
     {
-        return $this->_get(self::MOBILE);
+        return $this->get(self::MOBILE);
     }
 
     /**

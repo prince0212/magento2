@@ -27,9 +27,9 @@ class Edit extends AbstractController
         $frontId = (int) $this->getRequest()->getParam('front_id');
 
         $resultRedirect = $this->resultRedirectFactory->create();
-         if (!$frontId) {
+         /*if (!$frontId) {
             throw new \Magento\Framework\Exception\LocalizedException(__('Missing front Id'));
-        }
+        }*/
         try {
             if (!$frontId) {
 				$front = [];

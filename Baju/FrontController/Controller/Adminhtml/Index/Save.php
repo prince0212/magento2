@@ -64,7 +64,7 @@ class Save extends AbstractController
         $front = $this->frontFactory->create();
         $this->dataObjectHelper->populateWithArray(
             $front,
-            $frontData,
+            $frontData['front'],
             '\Baju\FrontController\Api\Data\FrontInterface'
         );
 

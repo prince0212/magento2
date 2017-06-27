@@ -5,12 +5,8 @@
     </head> 
 
     <body>
-        <referenceContainer name="sidebar.main">
-            <block class="Baju\FrontController\Block\Index\Sidebar" name="frontcontoller_index_sidebar" before="-" template="Baju_FrontController::frontcontroller_index_sidebar.phtml"/>
-        </referenceContainer>
-
         <referenceContainer name="content">
-            <block class="Baju\FrontController\Block\Index\Index" name="frontcontoller_index_index" template="Baju_FrontController::frontcontroller_index_index.phtml"/>
+            <block class="Baju\FrontController\Block\Index\Index" name="frontcontoller_index_index" template="Baju_FrontController::frontcontroller_index_index.phtml" cacheable="false"/>
         </referenceContainer>
     </body>
 </page>

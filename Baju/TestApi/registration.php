@@ -1,10 +1,7 @@
 <?php
-/**
- * Baju_OrderController 
- */
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Baju_OrderController',
+    'Baju_TestApi',
     __DIR__
 );

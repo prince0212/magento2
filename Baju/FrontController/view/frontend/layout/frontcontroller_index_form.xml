@@ -5,10 +5,6 @@
     </head> 
 
     <body>
-        <referenceContainer name="sidebar.main">
-            <block class="Baju\FrontController\Block\Index\Sidebar" name="frontcontoller_index_sidebar" before="-" template="Baju_FrontController::frontcontroller_index_sidebar.phtml"/>
-        </referenceContainer>
-
         <referenceContainer name="content">
             <block class="Baju\FrontController\Block\Index\Form" name="frontcontoller_index_form" template="Baju_FrontController::frontcontroller_index_form.phtml"/>
         </referenceContainer>

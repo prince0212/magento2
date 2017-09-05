@@ -6,13 +6,10 @@
  */
 -->
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
-    <route url="/V1/testapi/name/:name" method="GET">
+    <route url="/V1/testapi/name" method="GET">
         <service class="Baju\TestApi\Api\TestapiInterface" method="getName" />
         <resources>
-            <resource ref="self" />
+            <resource ref="anonymous" />
         </resources>
-        <data>
-            <parameter name="name" force="true">%name%</parameter>
-        </data>
     </route>
 </routes>

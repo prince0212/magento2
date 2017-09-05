@@ -14,10 +14,9 @@ interface TestapiInterface
     /**
      * Retrieve front matching the specified criteria.
      *
-     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \Baju\TestApi\Api\Data\FrontSearchResultsInterface
+     * @return \Baju\TestApi\Model\ResourceModel\TestapiRepository
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function getName($name);
+    public function getName();
 
 }

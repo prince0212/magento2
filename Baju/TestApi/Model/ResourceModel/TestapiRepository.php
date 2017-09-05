@@ -1,42 +1,21 @@
 <?php
 namespace Baju\TestApi\Model\ResourceModel;
 
-use Baju\TestapiController\Api\TestapiInterface;
+use Baju\TestApi\Api\TestapiInterface;
 
 /**
- * Front repository.
+ * Testapi Repository.
  */
 class TestapiRepository implements TestapiInterface
 {
-
-    const SEVERE_ERROR = 0;
-    const SUCCESS = 1;
-    const LOCAL_ERROR = 2;
- 
-    protected $_testapiFactory;
-   
     /**
-     * @param Data\FrontSearchResultInterfaceFactory $searchResultFactory
-     * @param DataObjectProcessor $dataObjectProcessor
-     * @param DataObjectHelper $dataObjectHelper
-     * @param Data\FrontInterfaceFactory $dataFrontFactory
-     * @param FrontCollectionFactory $collectionFactory
-     */
-    public function __construct(
-        \Baju\TestApi\Model\TestapiFactory $testapiFactory
-    ) {
-        $this->_testapiFactory = $testapiFactory;
-    }
-
-    /**
-     * Add sort order into collection
+     * Retrieve front matching the specified criteria.
      *
-     * @param FrontCollectionFactory $collection
-     * @param array $sortOrders
-     * @return void
+     * @return string
+     * @throws \Magento\Framework\Exception\LocalizedException
      */
-    private function getName($name)
+    public function getName()
     {
-        echo 'hi! '.$name;
+        return 'hi! my name is test api';
     }
 }
